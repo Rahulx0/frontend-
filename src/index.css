@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Explicitly source files because implicit detection was failing */
+@source "./pages/*.jsx";
+@source "./components/*.jsx";
+@source "./*.jsx";
+
+
+
