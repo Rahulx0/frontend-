@@ -5,7 +5,7 @@ const AuthPrivate = () => {
 
     const { currentUser } = useSelector((state) => state.user);
 
-    return currentUser?._id ? <Outlet /> : <Navigate to="/signin" />;
+    return !currentUser  ? <Outlet /> : <Navigate to="/signin" />;
   
 }
 
