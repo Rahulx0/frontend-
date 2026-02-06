@@ -4,7 +4,7 @@ import Signin from "./pages/Signin"
 import Homepage from "./pages/Homepage"
 import Navbar from "./components/Navbar"
 import Profile from "./pages/Profile"
-import AuthPrivate from "./components/AuthPrivate"
+import AuthPrivate from "./components/AuthPrivate.jsx"
 function App() {
 
   return (
