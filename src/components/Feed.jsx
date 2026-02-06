@@ -12,7 +12,7 @@ const { currentUser } = useSelector((state) => state.user);
 React.useEffect(() => {
     const fetchPosts = async () => {
         try {
-            const response = await fetch("http://localhost:4000/api/getAllPosts");
+            const response = await fetch("https://backend-hcxk.vercel.app/api/getAllPosts");
             const data = await response.json();
             if (data?.posts) {
                 setPosts(data.posts);
@@ -30,7 +30,7 @@ const handleLikePost = async (postId) => {
         return;
     }
     try {
-        const response = await fetch("http://localhost:4000/api/likePost", {
+        const response = await fetch("https://backend-hcxk.vercel.app/api/likePost", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ postId, userId: currentUser._id })

@@ -21,7 +21,7 @@ const CreatePost = () => {
         try {
             setIsSending(true);
             const response = await axios.post(
-                "http://localhost:4000/api/createPost",
+                "https://backend-hcxk.vercel.app/api/createPost",
                 { content, author: currentUser.currentUser?._id }
             );
 

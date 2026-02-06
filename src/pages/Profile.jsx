@@ -18,7 +18,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       if (!currentUser?._id) return;
       try {
-        const response = await fetch(`http://localhost:4000/api/profile/${currentUser._id}`);
+        const response = await fetch(`https://backend-hcxk.vercel.app/api/profile/${currentUser._id}`);
         const data = await response.json();
         if (data?.profile) {
           const profile = data.profile;
@@ -67,7 +67,7 @@ const Profile = () => {
         lastLogin,
       };
 
-      const response = await fetch('http://localhost:4000/api/profile/save', {
+      const response = await fetch('https://backend-hcxk.vercel.app/api/profile/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
